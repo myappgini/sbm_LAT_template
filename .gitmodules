@@ -1,3 +1,6 @@
 [submodule "plugins"]
 	path = plugins
 	url = git@github.com:myappgini/sbm_plugins.git
+[submodule "adminlte3"]
+	path = adminlte3
+	url = git@github.com:ColorlibHQ/AdminLTE.git
