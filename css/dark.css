@@ -1,3 +1,34 @@
+/* appgini dark custom */
+
+.container-fluid .row {
+    background: #2D3035;
+    border-radius: 10px;
+}
+
+.select2-container {
+    background: #2D3035;
+}
+
+.select2-container .select2-choice {
+    background: #2D3035;
+}
+
+.select2-drop.select2-display-none.select2-drop-active,
+.select2-drop.select2-display-none.select2-with-searchbox.select2-drop-active.select2-drop-above {
+    background: #2D3035;
+}
+
+.select2-search input {
+    background: #2D3035;
+}
+
+.select2-container .select2-choice span.select2-arrow {
+    background: #2D3035;
+}
+
+
+/*  */
+
 body {
     position: relative
 }
@@ -377,8 +408,8 @@ i[class*='icon-'] {
 nav.navbar {
     background: #2d3035;
     color: #8a8d93;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
     border-bottom: 1px solid #34373d;
     z-index: 10
 }
