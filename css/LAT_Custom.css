@@ -130,3 +130,8 @@
             white-space: nowrap;
         }
     }
+    
+    li.nav-item a.nav-link img {
+        /* width: 25px; */
+        height: 25px;
+    }
