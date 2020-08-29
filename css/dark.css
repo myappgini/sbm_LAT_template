@@ -5,17 +5,48 @@
     border-radius: 10px;
 }
 
+
+/* bordes del desplegable y fondo */
+
 .select2-container {
     background: #2D3035;
+}
+
+.select2-drop.select2-display-none.select2-drop-active {
+    background: #2D3035;
+    border-top: 1px solid #444951;
+    border: 1px solid #444951;
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+    border: 1px solid #444951;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+    border: 1px solid #444951;
 }
 
 .select2-container .select2-choice {
     background: #2D3035;
 }
 
-.select2-drop.select2-display-none.select2-drop-active,
-.select2-drop.select2-display-none.select2-with-searchbox.select2-drop-active.select2-drop-above {
+.select2-container.select2-drop-above .select2-choice {
     background: #2D3035;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active {
+    border-top: 1px solid #444951;
+}
+
+.select2-container.select2-drop-above .select2-choice {
+    border-bottom-color: #444951;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(45, 48, 53)), color-stop(0.9, rgb(45, 48, 53)));
+    background-image: -webkit-linear-gradient(center bottom, #eee 0%, rgb(45, 48, 53) 90%);
+    background-image: -moz-linear-gradient(center bottom, #eee 0%, rgb(45, 48, 53) 90%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+    background-image: linear-gradient(top, #eee 0%, rgb(45, 48, 53) 90%);
 }
 
 .select2-search input {
@@ -24,6 +55,16 @@
 
 .select2-container .select2-choice span.select2-arrow {
     background: #2D3035;
+}
+
+
+/*  */
+
+.main-footer {
+    background: #2D3035;
+    border-top: 1px solid #2D3035;
+    color: #869099;
+    padding: 1rem;
 }
 
 

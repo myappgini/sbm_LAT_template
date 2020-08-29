@@ -10,6 +10,8 @@ $j(function() {
 
 function updateBS() {
     $j('.visible-xs.visible-sm').addClass('d-block d-sm-block d-md-none');
+    $j('.visible-xs').addClass('d-block d-sm-none');
+    $j('.hidden-xs').addClass('d-none d-sm-block');
     $j('.visible-md.visible-lg').addClass('d-md-block d-sm-none d-none');
     $j('.btn-default').addClass('btn-secondary');
     $j('.input-group-btn').addClass('input-group-append');

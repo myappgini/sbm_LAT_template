@@ -33,8 +33,9 @@
 	<?php if ($LAT_globals['app-dir-RTL-enable']) { ?>
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/initializr/css/rtl.css">
 	<?php } ?>
-
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/LAT_Custom.css">
+	<!-- adding dark theme  -->
+	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/dark.css">
 
 	<!--[if lt IE 9]>
 		<script src="<?php echo PREPEND_PATH; ?>resources/initializr/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -79,7 +80,7 @@ if (isset($_GET['loginFailed']) || isset($_GET['signIn']) || $call == "membershi
 ?>
 	<style>
 		.container-fluid .row {
-			background-color: transparent;
+			/* background-color: transparent; */
 			border-radius: 10px;
 		}
 	</style>
