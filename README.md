@@ -17,6 +17,21 @@ Remember that: for the plugin to work, you must have previously purchased an ori
     3 Enable it from admin area plugins.
     4 Enjoy it!
 
+### Install like submodule
+Go to root project folder
+
+    $ git submodule add git@github.com:myappgini/sbm_LAT_template.git LA
+    $ git submodule update --init --recursive
+
+### Then for updates
+    $ git submodule update --recursive --remote
+
+### Add plugin for activate.
+Go to appgini plugins folder (remeber you need an official plugin)
+
+    $ git submodule add git@github.com:myappgini/sbm_lat_plugin_install.git lat
+    
+
 ## how to use
 
 After completing the compilation of your project, log in as administrator and go to the administrator area. The "Plugins" menu should appear with the "Landini Admin Template" option.
