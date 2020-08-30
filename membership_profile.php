@@ -211,12 +211,7 @@ include_once("$rootDir/header.php"); ?>
 
                       <div class="timeline-body">
                       <?php 
-                        if(!$pkField=getPKFieldName($item['tableName'])) {
-                          return "";
-                        }
-                        $where_id = " `{$item['tableName']}`.`$pkField`='" . makeSafe($item['pkValue'], false) . "' ";
-
-                        $result=  getDataTable($item['tableName'],$where_id);
+                        $result=  getDataTable($item['tableName'], makeSafe($item['pkValue'], false));
                         echo implode(',',$result);
                         //echo getCSVData($item['tableName'], $item['pkValue']); 
                         ?>
