@@ -5,6 +5,11 @@
     border-radius: 10px;
 }
 
+.table-hover tbody tr:hover {
+    color: #a1a3a7;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
 
 /* bordes del desplegable y fondo */
 
@@ -61,15 +66,7 @@
 
 .select2-container .select2-choice .select2-arrow {
     background: #2D3035;
-    display: inline-block;
-    width: 18px;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
     border-left: 1px solid #444951;
-    border-radius: 0 4px 4px 0;
-    background-clip: padding-box;
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2D3035), color-stop(0.6, #2D3035));
     background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #2D3035 60%);
     background-image: -moz-linear-gradient(center bottom, #ccc 0%, #2D3035 60%);
@@ -78,11 +75,8 @@
 }
 
 .select2-dropdown-open .select2-choice {
-    border-bottom-color: transparent;
     -webkit-box-shadow: 0 1px 0 #2D3035 inset;
     box-shadow: 0 1px 0 #2D3035 inset;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     background-color: #2D3035;
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2D3035), color-stop(0.5, #2D3035));
     background-image: -webkit-linear-gradient(center bottom, #fff 0%, #2D3035 50%);
