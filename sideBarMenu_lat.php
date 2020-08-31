@@ -6,7 +6,7 @@ if (!isset($Translation)) {
 }
 ?>
 <!-- aside.main-sidebar -->
-<aside class="main-sidebar elevation-4 sidebar-dark-primary">
+<aside class="main-sidebar elevation-4 sidebar-dark-primary" style=" z-index: 1050;">
     <!-- Brand Logo -->
     <a href="<?php echo PREPEND_PATH; ?>index.php" class="brand-link">
         <img src="<?php echo PREPEND_PATH; ?>LAT/logo/<?php echo $LAT_globals['app-brand-icon']; ?>" alt="app-brand-icon" class="brand-image img-rounded elevation-3" style="opacity: .8">
@@ -66,7 +66,7 @@ if (!isset($Translation)) {
                                                         <?php
                                                         $dot = (strlen($tc['Caption']) > $len) ? "..." : "";
                                                         echo substr($tc['Caption'], 0, $len) . $dot;
-                                                        echo counter($lta_table, $tc);
+                                                        echo counter($lte_table, $tc);
                                                         ?>
                                                     </p>
                                                 </a>
