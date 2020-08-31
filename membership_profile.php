@@ -4,7 +4,10 @@ $rootDir = dirname(__FILE__) . "/..";
 include("$rootDir/defaultLang.php");
 include("$rootDir/language.php");
 include("$rootDir/lib.php");
-include("$rootDir/LAT/myLib.php");
+if (!function_exists('getDataTable')){
+  include("$rootDir/LAT/myLib.php");
+}
+
 include_once("$rootDir/LAT/profile/mpi.php");
 
 $adminConfig = config('adminConfig');
