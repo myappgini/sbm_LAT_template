@@ -8,6 +8,11 @@
         z-index: 800;
     }
     
+    .nav-item .nav-link i.nav-tab-i {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+    
     .container-fluid .row {
         /* background: white; */
         border-radius: 10px;
