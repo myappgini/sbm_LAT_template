@@ -16,7 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title><?php echo $LAT_globals['app-title-prefix']; ?><?php echo (isset($x->TableTitle) ? $x->TableTitle : ''); ?></title>
-	<link id="browser_favicon" rel="shortcut icon" href="<?php echo PREPEND_PATH; ?>LAT/logo/logo.png">
+	<link id="browser_favicon" rel="shortcut icon" href="<?php echo PREPEND_PATH; ?><?php echo $LAT_globals['app-fav-icon']; ?>">
 
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/adminlte3/plugins/fontawesome-free/css/all.min.css">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/adminlte3/dist/css/adminlte.min.css">
