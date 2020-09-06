@@ -9,7 +9,7 @@ if (!isset($Translation)) {
 <aside class="main-sidebar elevation-4 sidebar-dark-primary" style=" z-index: 1050;">
     <!-- Brand Logo -->
     <a href="<?php echo PREPEND_PATH; ?>index.php" class="brand-link">
-        <img src="<?php echo PREPEND_PATH; ?>LAT/logo/<?php echo $LAT_globals['app-brand-icon']; ?>" alt="app-brand-icon" class="brand-image img-rounded elevation-3" style="opacity: .8">
+        <img src="<?php echo PREPEND_PATH; ?><?php echo $LAT_globals['app-brand-icon']; ?>" alt="app-brand-icon" class="brand-image img-rounded elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light"><?php echo $LAT_globals['app-brand-text']; ?></span>
     </a>
     <!-- .sidebar user panel (optional) -->
