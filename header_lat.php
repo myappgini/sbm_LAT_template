@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php if (!defined('PREPEND_PATH')) define('PREPEND_PATH', ''); ?>
 <?php if (!defined('datalist_db_encoding')) define('datalist_db_encoding', 'UTF-8'); ?>
-<?php include(dirname(__FILE__)."/config_lat.php"); ?>
+<?php include(dirname(__FILE__) . "/config_lat.php"); ?>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/adminlte3/dist/css/adminlte.min.css">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/plugins/jsonedit/jsonedit.css">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/glyphicons.css">
-	
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/lightbox/css/lightbox.css">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/select2/select2.css">
@@ -101,7 +101,7 @@ if (!defined('APPGINI_SETUP') && is_file(dirname(__FILE__) . '/../LAT/header_ext
 
 <body class="<?php echo $bodyClass; ?>">
 	<!-- .wrapper -->
-	<div class="wrapper"> 
+	<div class="wrapper">
 		<?php
 		$adminPath = $ADMINAREA ? "admin/" : "";
 		if (!$_REQUEST['Embedded']) include($adminPath . 'navBar_lat.php');
@@ -114,6 +114,22 @@ if (!defined('APPGINI_SETUP') && is_file(dirname(__FILE__) . '/../LAT/header_ext
 				<?php
 				if (class_exists('Notification')) echo Notification::placeholder();
 				if (function_exists('showNotifications')) echo showNotifications();
+				if (
+					isset($_SESSION['custom_msg']) &&
+					(isset($_REQUEST["record-updated-error"])
+						||	isset($_REQUEST['record-added-error'])
+						||	isset($_REQUEST['record-deleted-error'])
+						||	isset($_REQUEST['record-added-ok'])
+						||	isset($_REQUEST['record-updated-ok'])
+						||	isset($_REQUEST['record-deleted-ok']))
+				) {
+
+					echo Notification::placeholder();
+					echo Notification::show($_SESSION["custom_msg"]);
+					echo ob_get_clean();
+					unset($_SESSION['custom_msg']);
+				}
+
 				?>
 			</section>
 			<!-- /.content-header -->
@@ -121,4 +137,4 @@ if (!defined('APPGINI_SETUP') && is_file(dirname(__FILE__) . '/../LAT/header_ext
 			<section class="content">
 				<!-- .container-fluid -->
 				<div class="container-fluid">
-				<?php if ($ADMINAREA) echo "<!-- .row div in admin area --> <div class='card card-body'>"; ?>
+					<?php if ($ADMINAREA) echo "<!-- .row div in admin area --> <div class='card card-body'>"; ?>
