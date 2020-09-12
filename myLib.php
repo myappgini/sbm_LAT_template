@@ -54,7 +54,7 @@ function getDataTable_Values($table_name, $id = "", $debug = FALSE)
     $where_id = "";
     if ($id) {
         $table_key_fieldName = getPKFieldName($table_name);
-        $where_id = "AND `$table_name`.`$table_key_fieldName`='$id'";
+        $where_id = " WHERE `$table_name`.`$table_key_fieldName`='$id'";
     }
     $sql = "SELECT * FROM {$table_name} " . $where_id;
     if ($debug) {
