@@ -136,7 +136,7 @@
     ];
 
     var $sidebar = $(".main-sidebar");
-    var sidebar_class = get(".main-sidebar");
+    var sidebar_class = get(".main-sidebar") || "sidebar-dark-danger";
     sidebar_skins.map(function(skin) {
         $sidebar.removeClass(skin);
     });

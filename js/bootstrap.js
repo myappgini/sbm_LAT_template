@@ -1,11 +1,18 @@
 $j(function() {
     updateBS();
-    //setTimeout(updateBS(),5200);
+    //setTimeout(updateBS(), 600);
     $j('.add_new_parent, .view_parent').on('click', function() {
         setTimeout(function() {
             updateBS();
         }, 500);
     });
+
+    $j('.card-body').on('click', 'a.btn-success, .view-on-click a', function() {
+        setTimeout(function() {
+            updateBS();
+        }, 500);
+    });
+
 });
 
 function updateBS() {
@@ -38,7 +45,11 @@ function updateBS() {
 
     //modal windows
     $j('.modal-dialog').addClass('modal-xl');
-    $j('.modal-title').prependTo('.modal-header');
+    $title = $j('.modal-title').text();
+    //console.log($title);
+    $j('.modal-title').remove();
+    $j('.modal-header').prepend($title)
+
 
     setTimeout(function() {
         //admin tools
