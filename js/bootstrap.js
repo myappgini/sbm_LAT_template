@@ -2,18 +2,20 @@ $j(function() {
     updateBS();
     //setTimeout(updateBS(), 600);
     $j('.add_new_parent, .view_parent').on('click', function() {
-        setTimeout(function() {
-            updateBS();
-        }, 500);
+        delayUpdate();
     });
 
     $j('.card-body').on('click', 'a.btn-success, .view-on-click a', function() {
-        setTimeout(function() {
-            updateBS();
-        }, 500);
+        delayUpdate();
     });
 
 });
+
+function delayUpdate(t = 500) {
+    setTimeout(function() {
+        updateBS();
+    }, t);
+}
 
 function updateBS() {
     $j('.visible-xs.visible-sm').addClass('d-block d-sm-block d-md-none');
