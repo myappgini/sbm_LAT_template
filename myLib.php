@@ -49,7 +49,7 @@ function getDataTable($table_name, $id = false, $debug = FALSE)
  * @return
  * db_fetch from data result
  */
-function getDataTable_Values($table_name, $id = "", $debug = FALSE)
+function getDataTable_Values($table_name, $id = false, $debug = false)
 {
     $where_id = "";
     if ($id) {
