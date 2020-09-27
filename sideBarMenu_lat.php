@@ -31,6 +31,11 @@ if (!isset($Translation)) {
                         <p><?php echo $Translation["sign out"]; ?></p>
                     </a>
                 </li>
+                <?php 
+                    if (is_file(PREPEND_PATH . 'hooks/users-buttons.php')) {
+                        include(PREPEND_PATH . 'hooks/users-buttons.php');
+                    }
+                ?>
                 <div class="pb-3 mb-3" style="border-bottom: 1px solid #4f5962;"></div>
 
                 <?php
