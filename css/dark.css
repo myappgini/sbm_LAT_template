@@ -326,7 +326,7 @@ pre {
 }
 
 .page-header {
-    padding: 20px 15px;
+    /* padding: 20px 15px; */
     background: #2d3035;
     color: #8a8d93;
     margin-bottom: 30px
