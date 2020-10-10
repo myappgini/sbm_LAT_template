@@ -38,6 +38,7 @@
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/LAT_Custom.css">
 	<!-- adding dark theme  -->
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/dark.css">
+	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/multipleUpload/myLightbox.css">
 
 	<!--[if lt IE 9]>
 		<script src="<?php echo PREPEND_PATH; ?>resources/initializr/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
