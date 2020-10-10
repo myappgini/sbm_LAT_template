@@ -32,10 +32,14 @@ try {
 }
 
 ?>
-<!-- 
-<h1 >We are cleaning the house soon you will be redirected</h1>
-<h4>Progress log</h4> -->
 
+<h1>We are cleaning the house soon you will be redirected</h1>
+<!-- <h4>Progress log</h4>  -->
+<script>
+	setTimeout(() => {
+		window.location.replace("index.php");
+	}, 1000);
+</script>
 <?php
 $i=1;
 $code = '<?php include(dirname(__FILE__) . "/../LAT/setup_lat.php");?>';
