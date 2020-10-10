@@ -21,6 +21,8 @@
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/adminlte3/plugins/fontawesome-free/css/all.min.css">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/adminlte3/dist/css/adminlte.min.css">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/plugins/jsonedit/jsonedit.css">
+	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/plugins/dropzone/dropzone.min.css">
+	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/plugins/dropzone/dz.custom.css">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/glyphicons.css">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
@@ -57,6 +59,8 @@
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/jsonedit/jsonedit.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/TweenMax/TweenMax.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/l-makecounter/l-makecounter.js"></script>
+	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/dropzone/dropzone.js"></script>
+	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/dropzone/upload.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/jquery/js/jquery.mark.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/select2/select2.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/timepicker/bootstrap-timepicker.min.js"></script>
