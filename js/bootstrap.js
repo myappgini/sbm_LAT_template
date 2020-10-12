@@ -1,7 +1,6 @@
 $j(function() {
     updateBS();
-    //setTimeout(updateBS(), 600);
-    $j('.add_new_parent, .view_parent').on('click', function() {
+    $j('.card-body').on('click', '.view_parent, .add_new_parent', function() {
         delayUpdate();
     });
 
