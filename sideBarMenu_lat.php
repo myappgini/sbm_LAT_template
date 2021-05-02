@@ -42,7 +42,7 @@ if (!isset($Translation)) {
 
                 $homeLinks = [];
                 $len = 17;
-                @include("{$currDir}/hooks/links-home.php");
+                @include("{$currDir}/../hooks/links-home.php");
                 $arrTables = get_tables_info();
                 $groups = get_table_groups();
                 foreach ($groups as $lte_group => $lte_tables) {
