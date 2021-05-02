@@ -1,7 +1,7 @@
 
 # Landini Andmin Template for AppGini with AdminLTE 3 and bootstrap 4
 
-## Release R2.7.0
+## Release R2.7.1
 
 
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Template001.PNG)
@@ -12,7 +12,7 @@ Remember that: for the plugin to work, you must have previously purchased an ori
 
 ## Install
 
-    1 Download it from [Here](https://github.com/myappgini/sbm_LAT_template).
+    1 Download it from [Here](https://github.com/myappgini/sbm_LAT_template)
     2 Unzip it into your root project.
     3 Enable it from admin area plugins.
     4 Enjoy it!
@@ -20,7 +20,7 @@ Remember that: for the plugin to work, you must have previously purchased an ori
 ### Install like submodule
 Go to root project folder
 
-    $ git submodule add git@github.com:myappgini/sbm_LAT_template.git LA
+    $ git submodule add https://github.com/myappgini/sbm_LAT_template.git LAT
     $ git submodule update --init --recursive
 
 ### Then for updates
@@ -29,7 +29,7 @@ Go to root project folder
 ### Add plugin for activate.
 Go to appgini plugins folder (remeber you need an official plugin)
 
-    $ git submodule add git@github.com:myappgini/sbm_lat_plugin_install.git lat
+    $ git submodule add https://github.com/myappgini/sbm_lat_plugin_install.git lat
     
 
 ## how to use
