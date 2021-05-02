@@ -12,7 +12,10 @@ Remember that: for the plugin to work, you must have previously purchased an ori
 
 ## Install
 
-    1 Download it from Download from http://github.com/myappgini/sbm_LAT_template
+Download from http://github.com/myappgini/sbm_LAT_template
+
+
+    1 Download it from 
     2 Unzip it into your root project.
     3 Enable it from admin area plugins.
     4 Enjoy it!
