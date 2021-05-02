@@ -11,11 +11,9 @@
 Remember that: for the plugin to work, you must have previously purchased an original AppGini plugin.
 
 ## Install
+[Download link Here](https://github.com/myappgini/sbm_LAT_template)
 
-Download from http://github.com/myappgini/sbm_LAT_template
-
-
-    1 Download it from 
+    1 Download it from link upper
     2 Unzip it into your root project.
     3 Enable it from admin area plugins.
     4 Enjoy it!
