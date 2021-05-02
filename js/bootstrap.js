@@ -1,15 +1,25 @@
 $j(function() {
     updateBS();
-    //setTimeout(updateBS(),5200);
-    $j('.add_new_parent, .view_parent').on('click', function() {
-        setTimeout(function() {
-            updateBS();
-        }, 500);
+    $j('.card-body').on('click', '.view_parent, .add_new_parent', function() {
+        delayUpdate();
     });
+
+    $j('.card-body').on('click', 'a.btn-success, .view-on-click a', function() {
+        delayUpdate();
+    });
+
 });
+
+function delayUpdate(t = 500) {
+    setTimeout(function() {
+        updateBS();
+    }, t);
+}
 
 function updateBS() {
     $j('.visible-xs.visible-sm').addClass('d-block d-sm-block d-md-none');
+    $j('.visible-xs').addClass('d-block d-sm-none');
+    $j('.hidden-xs').addClass('d-none d-sm-block');
     $j('.visible-md.visible-lg').addClass('d-md-block d-sm-none d-none');
     $j('.btn-default').addClass('btn-secondary');
     $j('.input-group-btn').addClass('input-group-append');
@@ -36,7 +46,11 @@ function updateBS() {
 
     //modal windows
     $j('.modal-dialog').addClass('modal-xl');
-    $j('.modal-title').prependTo('.modal-header');
+    $title = $j('.modal-title').text();
+    //console.log($title);
+    $j('.modal-title').remove();
+    $j('.modal-header').prepend($title)
+
 
     setTimeout(function() {
         //admin tools

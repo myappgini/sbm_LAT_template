@@ -4,7 +4,10 @@ $rootDir = dirname(__FILE__) . "/..";
 include("$rootDir/defaultLang.php");
 include("$rootDir/language.php");
 include("$rootDir/lib.php");
-include("$rootDir/LAT/myLib.php");
+if (!function_exists('getDataTable')){
+  include("$rootDir/LAT/myLib.php");
+}
+
 include_once("$rootDir/LAT/profile/mpi.php");
 
 $adminConfig = config('adminConfig');
@@ -211,12 +214,7 @@ include_once("$rootDir/header.php"); ?>
 
                       <div class="timeline-body">
                       <?php 
-                        if(!$pkField=getPKFieldName($item['tableName'])) {
-                          return "";
-                        }
-                        $where_id = " `{$item['tableName']}`.`$pkField`='" . makeSafe($item['pkValue'], false) . "' ";
-
-                        $result=  getDataTable($item['tableName'],$where_id);
+                        $result=  getDataTable($item['tableName'], makeSafe($item['pkValue'], false));
                         echo implode(',',$result);
                         //echo getCSVData($item['tableName'], $item['pkValue']); 
                         ?>

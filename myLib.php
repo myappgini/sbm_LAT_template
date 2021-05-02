@@ -6,9 +6,8 @@
  * @param $table_name required
  * table name to get data
  * 
- * @param $where_id optional
- * is a string to indicate the select id from record use:
- * example " tablename.id=1", if empty get whole data from table
+ * @param $d optional
+ * is a string to indicate the select id from record use, if empty get whole data from table
  * 
  * @return
  * db_fetch from data result
@@ -44,19 +43,29 @@ function getDataTable($table_name, $id = false, $debug = FALSE)
  * @param $table_name required
  * table name to get data
  * 
- * @param $where_id optional
- * is a string to indicate the select id from record use:
- * example " tablename.id=1", if empty get whole data from table
+ * @param $id optional
+ * is a string to indicate the select id from record use, if empty get whole data from table
  * 
  * @return
  * db_fetch from data result
  */
-function getDataTable_Values($table_name, $where_id = "", $debug = FALSE)
+function getDataTable_Values($table_name, $id = false, $debug = false)
 {
-    $where_id = "" ? "" : " where 1=1 AND " . $where_id;
+    $where_id = "";
+    if ($id) {
+        $table_key_fieldName = getPKFieldName($table_name);
+        $where_id = " WHERE `$table_name`.`$table_key_fieldName`='$id'";
+    }
     $sql = "SELECT * FROM {$table_name} " . $where_id;
     if ($debug) {
-        echo "<br>" . $sql . "<br>";
+        echo Notification::placeholder();
+        echo Notification::show(array(
+            'message' => $sql,
+            'class' => 'warning',
+            'dismiss_seconds' => 0
+        ));
+        echo ob_get_clean();
+        exit;
     }
     $res = sql($sql, $eo);
     return db_fetch_assoc($res);
@@ -91,9 +100,8 @@ function importData()
 
 function retCountryData(&$country, &$country_values, $id)
 {
-    $where_id = "AND countries.id = $id";
-    $country = getDataTable('countries', $where_id);
-    $country_values = getDataTable_Values('countries', $where_id);
+    $country = getDataTable('countries', $id);
+    $country_values = getDataTable_Values('countries', $id);
 }
 
 function openpdf($file, $filename)
@@ -181,7 +189,12 @@ function formatDateDiff($start, $end = null)
     }
     if ($interval->s !== 0) {
         if (!count($format)) {
-            return "less than a minute ago";
+            $result = array(
+                "human" => "less than a minute ago",
+                "format" => $format,
+                "value" => 0
+            );
+            return $result;
         } else {
             $format[] = "%s " . $doPlural($interval->s, "second");
         }

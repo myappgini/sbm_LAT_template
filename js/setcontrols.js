@@ -136,7 +136,7 @@
     ];
 
     var $sidebar = $(".main-sidebar");
-    var sidebar_class = get(".main-sidebar");
+    var sidebar_class = get(".main-sidebar") || "sidebar-dark-danger";
     sidebar_skins.map(function(skin) {
         $sidebar.removeClass(skin);
     });
@@ -164,9 +164,9 @@
         $main_header.removeClass(color);
     });
     if (navbar_dark_skins.indexOf(color) > -1) {
-        $main_header.addClass("navbar-dark");
-    } else {
         $main_header.addClass("navbar-light");
+    } else {
+        $main_header.addClass("navbar-dark");
     }
     $main_header.addClass(color);
 })(jQuery);

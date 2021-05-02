@@ -6,10 +6,10 @@ if (!isset($Translation)) {
 }
 ?>
 <!-- aside.main-sidebar -->
-<aside class="main-sidebar elevation-4 sidebar-dark-primary">
+<aside class="main-sidebar elevation-4 sidebar-dark-primary" >
     <!-- Brand Logo -->
     <a href="<?php echo PREPEND_PATH; ?>index.php" class="brand-link">
-        <img src="<?php echo PREPEND_PATH; ?>LAT/logo/<?php echo $LAT_globals['app-brand-icon']; ?>" alt="app-brand-icon" class="brand-image img-rounded elevation-3" style="opacity: .8">
+        <img src="<?php echo PREPEND_PATH; ?><?php echo $LAT_globals['app-brand-icon']; ?>" alt="app-brand-icon" class="brand-image img-rounded elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light"><?php echo $LAT_globals['app-brand-text']; ?></span>
     </a>
     <!-- .sidebar user panel (optional) -->
@@ -31,6 +31,11 @@ if (!isset($Translation)) {
                         <p><?php echo $Translation["sign out"]; ?></p>
                     </a>
                 </li>
+                <?php 
+                    if (is_file(PREPEND_PATH . 'hooks/users-buttons.php')) {
+                        include(PREPEND_PATH . 'hooks/users-buttons.php');
+                    }
+                ?>
                 <div class="pb-3 mb-3" style="border-bottom: 1px solid #4f5962;"></div>
 
                 <?php
@@ -66,7 +71,7 @@ if (!isset($Translation)) {
                                                         <?php
                                                         $dot = (strlen($tc['Caption']) > $len) ? "..." : "";
                                                         echo substr($tc['Caption'], 0, $len) . $dot;
-                                                        echo counter($lta_table, $tc);
+                                                        echo counter($lte_table, $tc);
                                                         ?>
                                                     </p>
                                                 </a>

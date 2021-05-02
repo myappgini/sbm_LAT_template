@@ -8,8 +8,13 @@
         z-index: 800;
     }
     
+    .nav-item .nav-link i.nav-tab-i {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+    
     .container-fluid .row {
-        background-color: white;
+        /* background: white; */
         border-radius: 10px;
     }
     
@@ -129,4 +134,9 @@
             padding-right: 10px;
             white-space: nowrap;
         }
+    }
+    
+    li.nav-item a.nav-link img {
+        /* width: 25px; */
+        height: 25px;
     }
