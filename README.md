@@ -176,7 +176,7 @@ label[for='id'] + div {
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Prepend_info.png.PNG)
 
 simple use:
-``
+
     inline_fields(['weightReal', 'wgh_unity'], false, [6, 3])
     inline_fields(['dimensions', 'weightVolume', 'dim_unity'], false, [3, 3, 3])
     inline_fields([arra with the fields name], 'custon label or get the first if false', [custon array withs of fields or empty for automatic])
@@ -184,7 +184,7 @@ simple use:
     prepend_btn('dimensions', "Unit Setting...", "...", "");
     prepend_btn('field_name', "title info", "text", "icon-class");
 
-``
+
 - Buttons without labels function.
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label.png)
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/buttons_without_label_TV.png)
