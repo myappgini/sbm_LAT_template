@@ -69,6 +69,7 @@
 	<script src="<?php echo PREPEND_PATH; ?>resources/datepicker/js/datepicker.packed.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/js/bootstrap.js"></script>
+	<!-- fix to new common.js in 5.95 appgini version replace to common.js.php to legacy version -->
 	<script src="<?php echo PREPEND_PATH; ?>common.js"></script>
 
 	<?php
