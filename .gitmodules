@@ -1,9 +1,9 @@
 [submodule "plugins"]
 	path = plugins
-	url = git@github.com:myappgini/sbm_plugins.git
+	url = https://github.com/myappgini/sbm_plugins.git
 [submodule "adminlte3"]
 	path = adminlte3
-	url = git@github.com:ColorlibHQ/AdminLTE.git
+	url = https://github.com/ColorlibHQ/AdminLTE.git
 [submodule "tvedit"]
 	path = tvedit
-	url = git@github.com:myappgini/sbm_tvedit.git
+	url = https://github.com/myappgini/sbm_tvedit.git
