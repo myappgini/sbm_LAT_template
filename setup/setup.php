@@ -56,7 +56,7 @@ $files = [
 ];
 foreach ($files as $fn => $call) {
 	$i += 1;
-	$code = '<?php if (activate_LAT("' . $call[0] . '",$x,' . $call[1] . ')) return; ?>';
+	$code = '<?php if (activate_LAT("' . $call[0] . '",$x, $Translation, ' . $call[1] . ')) return; ?>';
 	$file_path = $path . "/$fn.php";
 	$res = $lat_class->add_to_file($file_path, $extra_function, $code);
 	//echo $res?"<br>":"warning-$i<br>";

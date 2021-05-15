@@ -1,5 +1,5 @@
 <?php
-function activate_LAT($fn, $x, $ADMINAREA = false)
+function activate_LAT($fn, $x, $Translation, $ADMINAREA = false)
 {
 	if (!empty($fn) && get_LTA_Status()) {
 		$rootDir = dirname(__FILE__) . "/..";
