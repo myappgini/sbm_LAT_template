@@ -1,7 +1,7 @@
 
 # Landini Andmin Template for AppGini with AdminLTE 3 and bootstrap 4
 
-## Release R2.7.2
+## Release R2.7.3
 
 
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Template001.PNG)
