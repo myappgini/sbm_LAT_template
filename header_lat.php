@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <?php if (!defined('PREPEND_PATH')) define('PREPEND_PATH', ''); ?>
-<?php if (!defined('datalist_db_encoding')) define('datalist_db_encoding', 'UTF-8'); ?>
+<?php if(function_exists('set_headers')) { set_headers(); } ?>
+<?php if(!isset($Translation)) die('No direct access allowed!'); ?><!DOCTYPE html>
 <?php include(dirname(__FILE__) . "/config_lat.php"); ?>
+<?php if(!defined('datalist_db_encoding')) define('datalist_db_encoding', 'UTF-8'); ?>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js"> 
 <!--<![endif]-->
 
 <head>
@@ -62,12 +64,14 @@
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/l-makecounter/l-makecounter.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/dropzone/dropzone.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/dropzone/upload.js"></script>
+	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/jscookie/js.cookie.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/jquery/js/jquery.mark.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/select2/select2.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/timepicker/bootstrap-timepicker.min.js"></script>
-	<script src="<?php echo PREPEND_PATH; ?>resources/jscookie/js.cookie.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/datepicker/js/datepicker.packed.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script src="<?php echo PREPEND_PATH; ?>resources/hotkeys/jquery.hotkeys.min.js"></script>
+	<script src="<?php echo PREPEND_PATH; ?>nicEdit.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/js/bootstrap.js"></script>
 	<!-- fix to new common.js in 5.95 appgini version replace to common.js.php to legacy version -->
 	<script src="<?php echo PREPEND_PATH; ?>common.js"></script>

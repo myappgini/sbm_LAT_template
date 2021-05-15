@@ -1,5 +1,5 @@
 <?php
-if (!isset($Translation)) {
+if (isset($Translation)) {
     $currDir = dirname(__FILE__);
 	include("{$currDir}/../defaultLang.php");
 	include("{$currDir}/../language.php");
