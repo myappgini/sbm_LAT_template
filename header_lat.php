@@ -69,7 +69,7 @@
 	<script src="<?php echo PREPEND_PATH; ?>resources/datepicker/js/datepicker.packed.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>resources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/js/bootstrap.js"></script>
-	<script src="<?php echo PREPEND_PATH; ?>common.js.php"></script>
+	<script src="<?php echo PREPEND_PATH; ?>common.js"></script>
 
 	<?php
 	if (isset($x->TableName) && is_file(dirname(__FILE__) . "/../hooks/{$x->TableName}-tv.js")) { ?>
