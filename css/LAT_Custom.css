@@ -140,3 +140,8 @@
         /* width: 25px; */
         height: 25px;
     }
+    /* add background to calendar */
+    .fc.fc-ltr.bootstrap-themed{
+        background: #FAFAFA;
+        border-radius: 10px;
+    }

@@ -48,7 +48,6 @@
 
 	<script src="<?php echo PREPEND_PATH; ?>LAT/adminlte3/plugins/jquery/jquery.min.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/adminlte3/plugins/jquery-ui/jquery-ui.min.js"></script>
-	<script src="<?php echo PREPEND_PATH; ?>LAT/adminlte3/plugins/popper/popper.min.js"></script>
 	<script>
 		//Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
 		$.widget.bridge('uibutton', $.ui.button);
@@ -60,8 +59,6 @@
 	<script src="<?php echo PREPEND_PATH; ?>LAT/adminlte3/dist/js/adminlte.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/jsonedit/jquery.contextMenu.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/jsonedit/jsonedit.js"></script>
-	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/TweenMax/TweenMax.min.js"></script>
-	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/l-makecounter/l-makecounter.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/dropzone/dropzone.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/dropzone/upload.js"></script>
 	<script src="<?php echo PREPEND_PATH; ?>LAT/plugins/jscookie/js.cookie.js"></script>
