@@ -1,6 +1,6 @@
 /**
  */
-(function($) {
+(function ($) {
     'use strict';
 
     var $sidebar = $('#control-sidebar-color-tab');
@@ -46,23 +46,24 @@
         '<h5>Customize Template</h5><hr class="mb-2"/>'
     );
     //checkboxes
-    var settings = [{
-            selector: ".main-header",
-            group: "Navbar options",
-            class: ["border-bottom-0", "text-sm"],
-            title: ["No Navbar border", "Navbar small text"]
-        },
+    var settings = [
         {
             selector: "body",
-            group: "Menu bar options",
-            class: ["text-sm", "sidebar-collapse"],
-            title: ["Small text", "Still collapse"]
+            group: "Mode Options",
+            class: ["dark-mode", "layout-fixed", "text-sm", "sidebar-collapse","sidebar-mini", "layout-footer-fixed"],
+            title: ["Dark Mode", "Fixed Mode", "Small text", "Still Collapse Sidebar", "Sidebar Mini", "Footer Fixed"]
+        },
+        {
+            selector: ".main-header",
+            group: "Navbar options",
+            class: ["border-bottom-0", "text-sm", "dropdown-legacy"],
+            title: ["No Navbar border", "Navbar small text", "Dropdown Legacy Offset"]
         },
         {
             selector: ".nav-sidebar",
             group: "Sidebar nav options",
-            class: ["text-sm", "nav-flat", "nav-legacy", "nav-compact", "nav-child-indent"],
-            title: ["Small text", "Flat style", "Legacy style", "Compact", "Child indent"]
+            class: ["text-sm", "nav-flat", "nav-legacy", "nav-compact", "nav-child-indent", "nav-collapse-hide-child"],
+            title: ["Sidebar Small text", "Flat style", "Legacy style", "Compact", "Child indent", "Nav Child Hide on Collapse"]
         },
         {
             selector: ".main-footer",
@@ -95,7 +96,7 @@
                 value: 1,
                 checked: value,
                 'class': 'mr-1'
-            }).on('click', function() {
+            }).on('click', function () {
                 if ($(this).is(':checked')) {
                     $(e.selector).addClass(c);
                 } else {
@@ -120,11 +121,11 @@
     });
 
     var navbar_all_colors = navbar_dark_skins.concat(navbar_light_skins);
-    var $navbar_variants_colors = createSkinBlock(navbar_all_colors, function(e) {
+    var $navbar_variants_colors = createSkinBlock(navbar_all_colors, function (e) {
         var color = $(this).data('color');
         var $main_header = $('.main-header');
         $main_header.removeClass('navbar-dark').removeClass('navbar-light');
-        navbar_all_colors.map(function(color) {
+        navbar_all_colors.map(function (color) {
             $main_header.removeClass(color);
         });
 
@@ -220,11 +221,13 @@
         'class': 'd-flex'
     });
     $container.append($accent_variants);
-    $container.append(createSkinBlock(accent_colors, function() {
+
+    
+    $container.append(createSkinBlock(accent_colors, function () {
         var color = $(this).data('color');
         var accent_class = color;
         var $body = $('body');
-        accent_colors.map(function(skin) {
+        accent_colors.map(function (skin) {
             $body.removeClass(skin);
         });
 
@@ -237,11 +240,11 @@
         'class': 'd-flex'
     });
     $container.append($sidebar_variants);
-    $container.append(createSkinBlock(sidebar_colors, function() {
+    $container.append(createSkinBlock(sidebar_colors, function () {
         var color = $(this).data('color');
         var sidebar_class = 'sidebar-dark-' + color.replace('bg-', '');
         var $sidebar = $('.main-sidebar');
-        sidebar_skins.map(function(skin) {
+        sidebar_skins.map(function (skin) {
             $sidebar.removeClass(skin);
         });
 
@@ -254,11 +257,11 @@
         'class': 'd-flex'
     });
     $container.append($sidebar_variants);
-    $container.append(createSkinBlock(sidebar_colors, function() {
+    $container.append(createSkinBlock(sidebar_colors, function () {
         var color = $(this).data('color');
         var sidebar_class = 'sidebar-light-' + color.replace('bg-', '');
         var $sidebar = $('.main-sidebar');
-        sidebar_skins.map(function(skin) {
+        sidebar_skins.map(function (skin) {
             $sidebar.removeClass(skin);
         });
 
@@ -275,17 +278,17 @@
 
     var $clear_btn = $('<a />', {
         href: 'javascript:void(0)'
-    }).text('clear').on('click', function() {
+    }).text('clear').on('click', function () {
         var $logo = $('.brand-link');
-        logo_skins.map(function(skin) {
+        logo_skins.map(function (skin) {
             $logo.removeClass(skin);
         });
     });
 
-    $container.append(createSkinBlock(logo_skins, function() {
+    $container.append(createSkinBlock(logo_skins, function () {
         var color = $(this).data('color');
         var $logo = $('.brand-link');
-        logo_skins.map(function(skin) {
+        logo_skins.map(function (skin) {
             $logo.removeClass(skin);
         });
         $logo.addClass(color);
@@ -297,7 +300,7 @@
             'class': 'd-flex flex-wrap mb-3'
         });
 
-        colors.map(function(color) {
+        colors.map(function (color) {
             var $color = $('<div />', {
                 'class': (typeof color === 'object' ? color.join(' ') : color).replace('navbar-', 'bg-').replace('accent-', 'bg-') + ' elevation-2'
             });
@@ -316,9 +319,9 @@
                 cursor: 'pointer'
             });
 
-            $color.hover(function() {
+            $color.hover(function () {
                 $(this).css({ opacity: 1 }).removeClass('elevation-2').addClass('elevation-4');
-            }, function() {
+            }, function () {
                 $(this).css({ opacity: 0.8 }).removeClass('elevation-4').addClass('elevation-2');
             });
 
@@ -333,17 +336,18 @@
 })(jQuery);
 
 function get(name) {
-    if (typeof(Storage) !== 'undefined') {
-        //console.log('get value' + name);
-        return localStorage.getItem(name);
+    if (typeof (Storage) !== 'undefined') {
+        const value = localStorage.getItem(name);
+        console.log('get value' + name, value);
+        return value;
     } else {
         window.alert('Please use a modern browser to properly view this template!');
     }
 }
 
 function store(name, val) {
-    if (typeof(Storage) !== 'undefined') {
-        //console.log('store value: ' + name+" = "+val);
+    if (typeof (Storage) !== 'undefined') {
+        console.log('store value: ' + name + " = " + val);
         localStorage.setItem(name, val);
     } else {
         window.alert('Please use a modern browser to properly view this template!');

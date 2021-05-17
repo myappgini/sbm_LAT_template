@@ -45,6 +45,7 @@ if (isset($Translation)) {
                 @include("{$currDir}/../hooks/links-home.php");
                 $arrTables = get_tables_info();
                 $groups = get_table_groups();
+                //TODO: crear una nueva funcion get_table_groups
                 foreach ($groups as $lte_group => $lte_tables) {
                     if (($lte_group !== 'hiddens' || $memberInfo['admin'])) { // new fucntionality if table group named hiddens dont show in other users
                         if (count($lte_tables)) {

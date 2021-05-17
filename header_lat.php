@@ -39,7 +39,6 @@
 	<?php } ?>
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/LAT_Custom.css">
 	<!-- adding dark theme  -->
-	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/css/dark.css">
 	<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LAT/multipleUpload/myLightbox.css">
 
 	<!--[if lt IE 9]>
