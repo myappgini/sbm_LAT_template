@@ -1,7 +1,7 @@
 
 # Landini Andmin Template for AppGini with AdminLTE 3 and bootstrap 4
 
-## Release R2.7.3
+## Release R2.8.0
 
 
 ![Home Page](https://raw.githubusercontent.com/myappgini/LandiniAdminTemplate/master/LAT/screenshots/Template001.PNG)
@@ -89,6 +89,9 @@ function  getLteStatus($LTE_enable = true){
 ```
 
 ## Changes
+18/05/21
+- add dark mode lteadmin default and fox some issues for new appgini Version
+
 01/05/21
 - BUG FIX - load customs options from links-home
 
