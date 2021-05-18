@@ -1,6 +1,6 @@
     .content-wrapper {
         min-height: 100%;
-        background-color: #ecf0f5;
+        /* background-color: #ecf0f5; */
         background: url(../backgrounds/photo2.png);
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -15,6 +15,10 @@
     
     .container-fluid .row {
         background: white;
+        border-radius: 10px;
+    }
+    .dark-mode .container-fluid .row {
+        background: #2F343A;
         border-radius: 10px;
     }
     
@@ -69,6 +73,15 @@
     .page-header {
         margin: 10px 0 20px 0;
         font-size: 22px;
+        padding-left: 10px;
+        padding-bottom: 2px;
+        border-radius: 10px;
+    }
+    .page-header {
+        background-color: #FAFAFA;
+    }
+    .dark-mode .page-header {
+        background-color: #2F343A;
     }
     /* */
     
@@ -144,4 +157,11 @@
     .fc.fc-ltr.bootstrap-themed{
         background: #FAFAFA;
         border-radius: 10px;
+    }
+    .dark-mode .fc.fc-ltr.bootstrap-themed{
+        background: #2F343A;
+        border-radius: 10px;
+    }
+    .dark-mode .fc-day-header.fc-widget-header{
+        background: #2F343A;
     }

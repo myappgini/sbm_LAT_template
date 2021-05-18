@@ -13,7 +13,7 @@ if (!isset($Translation)) {
 }
 ?>
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-dark navbar-info" >
+<nav class="main-header navbar navbar-expand" >
   <!-- Navbar left Menu -->
   <ul class="navbar-nav">
     <?php if(!$inLogin) {?>

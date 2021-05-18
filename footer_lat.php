@@ -25,6 +25,7 @@
     </div>
     <!-- /.wrapper -->
 <script src="<?php echo PREPEND_PATH; ?>resources/lightbox/js/lightbox.min.js"></script>
+<script src="<?php echo PREPEND_PATH; ?>LAT/js/settings.js"></script>
 <script src="<?php echo PREPEND_PATH; ?>LAT/js/control.js"></script>
 <?php
 if (!$memberInfo['admin'] && $memberInfo['group'] !== 'anonymous') {

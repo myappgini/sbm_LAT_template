@@ -2,15 +2,15 @@
     'use strict';
     var settings = [{
             selector: ".main-header",
-            class: ["border-bottom-0", "text-sm"],
+            class: ["border-bottom-0", "text-sm", "dropdown-legacy"],
         },
         {
             selector: "body",
-            class: ["text-sm", "sidebar-collapse"]
+            class: ["dark-mode", "layout-fixed", "text-sm", "sidebar-collapse", "sidebar-mini", "layout-footer-fixed"]
         },
         {
             selector: ".nav-sidebar",
-            class: ["text-sm", "nav-flat", "nav-legacy", "nav-compact", "nav-child-indent"]
+            class:  ["text-sm", "nav-flat", "nav-legacy", "nav-compact", "nav-child-indent", "nav-collapse-hide-child"],
         },
         {
             selector: ".main-footer",
@@ -37,104 +37,6 @@
         });
     });
 
-    var navbar_dark_skins = [
-        "navbar-primary",
-        "navbar-secondary",
-        "navbar-info",
-        "navbar-success",
-        "navbar-danger",
-        "navbar-indigo",
-        "navbar-purple",
-        "navbar-pink",
-        "navbar-navy",
-        "navbar-lightblue",
-        "navbar-teal",
-        "navbar-cyan",
-        "navbar-dark",
-        "navbar-gray-dark",
-        "navbar-gray",
-    ];
-
-    var navbar_light_skins = [
-        "navbar-light",
-        "navbar-warning",
-        "navbar-white",
-        "navbar-orange",
-    ];
-
-    var sidebar_colors = [
-        "bg-primary",
-        "bg-warning",
-        "bg-info",
-        "bg-danger",
-        "bg-success",
-        "bg-indigo",
-        "bg-lightblue",
-        "bg-navy",
-        "bg-purple",
-        "bg-fuchsia",
-        "bg-pink",
-        "bg-maroon",
-        "bg-orange",
-        "bg-lime",
-        "bg-teal",
-        "bg-olive",
-    ];
-
-    var accent_colors = [
-        "accent-primary",
-        "accent-warning",
-        "accent-info",
-        "accent-danger",
-        "accent-success",
-        "accent-indigo",
-        "accent-lightblue",
-        "accent-navy",
-        "accent-purple",
-        "accent-fuchsia",
-        "accent-pink",
-        "accent-maroon",
-        "accent-orange",
-        "accent-lime",
-        "accent-teal",
-        "accent-olive",
-    ];
-
-    var sidebar_skins = [
-        "sidebar-dark-primary",
-        "sidebar-dark-warning",
-        "sidebar-dark-info",
-        "sidebar-dark-danger",
-        "sidebar-dark-success",
-        "sidebar-dark-indigo",
-        "sidebar-dark-lightblue",
-        "sidebar-dark-navy",
-        "sidebar-dark-purple",
-        "sidebar-dark-fuchsia",
-        "sidebar-dark-pink",
-        "sidebar-dark-maroon",
-        "sidebar-dark-orange",
-        "sidebar-dark-lime",
-        "sidebar-dark-teal",
-        "sidebar-dark-olive",
-        "sidebar-light-primary",
-        "sidebar-light-warning",
-        "sidebar-light-info",
-        "sidebar-light-danger",
-        "sidebar-light-success",
-        "sidebar-light-indigo",
-        "sidebar-light-lightblue",
-        "sidebar-light-navy",
-        "sidebar-light-purple",
-        "sidebar-light-fuchsia",
-        "sidebar-light-pink",
-        "sidebar-light-maroon",
-        "sidebar-light-orange",
-        "sidebar-light-lime",
-        "sidebar-light-teal",
-        "sidebar-light-olive",
-    ];
-
     var $sidebar = $(".main-sidebar");
     var sidebar_class = get(".main-sidebar") || "sidebar-dark-danger";
     sidebar_skins.map(function(skin) {
@@ -150,7 +52,7 @@
     $body.addClass(accent_class);
 
     var logo_skins = navbar_dark_skins.concat(navbar_light_skins);
-    var color = get(".bramd-link");
+    var color = get(".brand-link");
     var $logo = $(".brand-link");
     logo_skins.map(function(skin) {
         $logo.removeClass(skin);
@@ -164,9 +66,9 @@
         $main_header.removeClass(color);
     });
     if (navbar_dark_skins.indexOf(color) > -1) {
-        $main_header.addClass("navbar-light");
-    } else {
         $main_header.addClass("navbar-dark");
+    } else {
+        $main_header.addClass("navbar-light");
     }
     $main_header.addClass(color);
 })(jQuery);
